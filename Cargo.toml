@@ -1,0 +1,24 @@
+[package]
+edition = "2021"
+name = "liquid-heck"
+version = "0.1.0"
+keywords = ["liquid", "heck", "filter", "camel", "snake"]
+authors= ["Valvassori Moïse <moise.valvassori@gmail.com>"]
+description = "Case conversion (CamelCase, snake_case, ...) filters for Liquid using Heck library."
+homepage = "https://github.com/djedi23/liquid-heck"
+repository = "https://github.com/djedi23/liquid-heck"
+license = "MIT"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+heck = "0.4"
+liquid-core = "0.26"
+liquid-derive = "0.26"
+tracing = { version = "0.1", optional = true }
+
+[dev-dependencies]
+pretty_assertions = "1.4"
+liquid = "0.26"
+
+[features]
+tracing = ["dep:tracing"]
